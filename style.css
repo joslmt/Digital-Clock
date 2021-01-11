@@ -1,0 +1,81 @@
+.container{
+    display: grid;
+    justify-items: center;
+    margin: 0 auto;
+    width: 60%;
+    padding: 1em;
+    background-color: black;
+    box-shadow: 9px 9px rgb(34, 33, 33);
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}   
+.clock{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+.clock>div{
+    display: grid;
+    justify-items: center;
+    gap: .25em;
+}
+input[type=button]{
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+}
+.center{
+    display: flex;
+    justify-content: space-between;
+    gap: 5em;
+    align-items: center;
+}
+#hora{
+    color: white;
+    font-size: 200px;
+}
+#month{font-size: 160px;}
+@media (max-width: 1200px){
+    .container{
+        width: 60%;
+    }
+    .center{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+@media (max-width: 850px){
+    .container{
+        padding: 1.5em;
+        width: 60%;
+    }
+}
+@media (max-width: 650px){
+    .container{
+        padding: 1.5em;
+        display: flex;
+        flex-direction: column;
+    }
+    #hora{
+        font-size: 10em;
+    }
+    .clock{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .center{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    @media (max-width: 550px){
+        #hora{
+            font-size: 6em;
+        }
+        #month{
+            font-size: 8em;
+        }
+    }
+}
