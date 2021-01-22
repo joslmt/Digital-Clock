@@ -1,20 +1,18 @@
 window.onload = () =>{
     const fullh = document.querySelector(".full-hours");
     const monthY = document.querySelector(".month");
-    
+    const change = document.querySelector("img#change");
     const getTime = () => {
         const date = new Date();
         let h = date.getHours();
         let m = date.getMinutes();
         const day = date.getDay();
         const month = date.getMonth();
-
         h = checkT(h);
         m = checkT(m);
         function checkT(i) {
             if (i < 10) {
-                i = "0" + i;
-            }
+                i = "0" + i;}
             return i;
         }
         //actual day week
@@ -30,7 +28,7 @@ window.onload = () =>{
             break;
             case 3:
                 const b3 = document.querySelector("#bt3")
-                b3.style.background = 'orange';
+                b3.style.background = 'red';
                 console.log("miércoles");
             break;
             case 4:
@@ -118,9 +116,14 @@ window.onload = () =>{
             break;
         }
         fullh.innerHTML = `
-        <div id='hora'>${h}:${m}</div>
-        `; 
+        <div ><p id='hora'>${h}:${m}</p></div>
+        `;
     }
+    const changeColor = () =>{
+        const container = document.querySelector(".container");
+        container.classList.toggle('new-container-color');
+    }
+    change.onclick = changeColor;
     getTime();
     setInterval(getTime, 60000);
 }

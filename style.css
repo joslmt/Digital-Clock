@@ -1,30 +1,47 @@
+body{ background-color: #e9c46a; }
 .container{
+    transition: .5s;
     display: grid;
     justify-items: center;
     margin: 0 auto;
     width: 60%;
     padding: 1em;
-    background-color: black;
-    box-shadow: 9px 9px rgb(34, 33, 33);
+    border-radius: .15em;
     color: white;
+    background-color: black;
+    box-shadow: 1em 1em 1em rgb(121, 119, 119);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}   
+}
+img{
+    transition: .75s;
+    width: 3em;
+}
+img:hover{
+    transition: .75s;
+    transform: scale(1.15, 1.15);
+}
 .clock{
     width: 80%;
     display: flex;
     justify-content: space-between;
+    font-size: 20px;
 }
 .clock>div{
     display: grid;
     justify-items: center;
     gap: .25em;
 }
-input[type=button]{
+.clock>div>input[type=button]{
     width: 2em;
     height: 2em;
     border-radius: 50%;
     border: none;
     outline: none;
+}
+#change{
+    display: grid;
+    justify-items: right;
+    padding: 1em;
 }
 .center{
     display: flex;
@@ -33,10 +50,19 @@ input[type=button]{
     align-items: center;
 }
 #hora{
-    color: white;
-    font-size: 200px;
+    font-size: 100px;
 }
-#month{font-size: 160px;}
+#month{font-size: 120px;}
+/*====*/
+.new-container-color{
+    transform: scale(1.1, 1.1);
+    box-shadow: none;
+    transition: .5s;
+    background-color: #2a9d8f;
+    color: black;
+}
+#hora>.new-container-color{color: black;}
+/*====*/
 @media (max-width: 1200px){
     .container{
         width: 60%;
